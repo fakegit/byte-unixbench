@@ -40,7 +40,7 @@ char SCCSid[] = "@(#) @(#)dhry_1.c:3.4 -- 5/15/91 19:30:21";
 #include "dhry.h"
 #include "timeit.c"
 
-unsigned long Run_Index;
+volatile unsigned long Run_Index;
 
 void report()
 {
