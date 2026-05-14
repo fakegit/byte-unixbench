@@ -32,7 +32,7 @@ char SCCSid[] = "@(#) @(#)syscall.c:3.3 -- 5/15/91 19:30:21";
 #include <unistd.h>
 #include "timeit.c"
 
-unsigned long iter;
+volatile unsigned long iter;
 
 void report()
 {

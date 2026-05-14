@@ -27,7 +27,7 @@ char SCCSid[] = "@(#) @(#)looper.c:1.4 -- 5/15/91 19:30:22";
 #include <sys/wait.h>
 #include "timeit.c"
 
-unsigned long iter;
+volatile unsigned long iter;
 char *cmd_argv[28];
 int  cmd_argc;
 
