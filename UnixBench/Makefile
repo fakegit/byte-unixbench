@@ -1,5 +1,5 @@
 ##############################################################################
-#	UnixBench v6.0.0
+#	UnixBench v6.0.1
 #  Based on The BYTE UNIX Benchmarks - Release 3
 #          Module: Makefile   SID: 3.9 5/15/91 19:30:15
 #
