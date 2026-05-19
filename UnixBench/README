@@ -1,4 +1,4 @@
-Version 6.0.0 -- 2025-05-21
+Version 6.0.1 -- 2026-05-19
 
 ================================================================
 To use Unixbench:
@@ -26,6 +26,21 @@ For information on adding tests into the benchmark, see "WRITING_TESTS".
 
 
 ===================== RELEASE NOTES =====================================
+
+========================  May 19 ==========================
+v6.0.1
+
+Bug Fixes
+- Fixed compilation failures on modern GCC (15+) and Clang (21+) by
+  specifying -std=gnu89 and suppressing C90 mixed declaration warnings
+  in the Makefile.
+- Added volatile qualifier to global loop counter variables (iter/Run_Index)
+  in hanoi.c, syscall.c, pipe.c, context1.c, spawn.c, looper.c, and dhry_1.c
+  to prevent LTO and aggressive optimizers from eliminating benchmark loops.
+- Fixed incorrect printf format specifiers (%ld → %lu) for unsigned long
+  variables in arith.c, dhry_1.c, hanoi.c, pipe.c, syscall.c, and fstime.c.
+  The mismatch caused undefined behavior and corrupted COUNT output on some
+  platforms.
 
 ========================  May 21 ==========================
 v6.0.0
