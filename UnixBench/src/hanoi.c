@@ -26,7 +26,7 @@ char SCCSid[] = "@(#) @(#)hanoi.c:3.3 -- 5/15/91 19:30:20";
 
 void mov(int n, int f, int t);
 
-unsigned long iter = 0;
+volatile unsigned long iter = 0;
 int num[4];
 long cnt;
 
